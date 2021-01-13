@@ -1,0 +1,65 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 5 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     Shopping_CustomerData
+Instances:    200
+Attributes:   8
+              CustomerID
+              CustomerGender
+              CustomerAge
+              CustomerCity
+              AnnualIncome
+              CreditScore
+              SpendingScore
+              CustomerCityID
+Test mode:    evaluate on training data
+
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 6
+Within cluster sum of squared errors: 169.5416364212733
+
+Initial starting points (random):
+
+Cluster 0: 1114,Male,56,Delhi,238627.5838,606,15,4
+Cluster 1: 1187,Female,74,Kolkata,118255.8374,615,75,3
+Cluster 2: 1088,Female,66,Chennai,560856.4185,738,40,2
+Cluster 3: 1090,Female,55,Delhi,125660.3599,808,44,4
+Cluster 4: 1043,Male,54,Bengaluru,279363.0453,704,39,1
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                Cluster#
+Attribute          Full Data           0           1           2           3           4
+                     (200.0)      (36.0)      (26.0)      (42.0)      (43.0)      (53.0)
+========================================================================================
+CustomerID            1100.5   1102.2222   1093.7308   1120.1905   1103.6047   1084.5283
+CustomerGender        Female        Male      Female      Female      Female        Male
+CustomerAge            45.52     44.6667     48.3462     49.4286     41.0233     45.2642
+CustomerCity       Bengaluru      Mumbai     Kolkata     Chennai       Delhi   Bengaluru
+AnnualIncome     285143.9316 304347.0524 272169.4476 335387.4189 261502.1019 257830.6571
+CreditScore          719.975    651.2222    762.3462    736.4524    766.0465    695.4528
+SpendingScore         50.705     50.1667     62.4231     40.7143     50.7442     53.2075
+CustomerCityID          2.85      4.6389           3       1.881      4.3023      1.1509
+
+
+
+
+Time taken to build model (full training data) : 0.01 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0       36 ( 18%)
+1       26 ( 13%)
+2       42 ( 21%)
+3       43 ( 22%)
+4       53 ( 27%)
+
